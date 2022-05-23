@@ -1,3 +1,3 @@
-from .create_dataset import CustomDataset
-from .trainer import Trainer
+from .dataset import CustomDataset
+from .trainer import Classifier
 from .pipeline import Pipeline

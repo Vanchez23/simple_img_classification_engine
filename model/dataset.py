@@ -49,9 +49,9 @@ class CustomDataset(Dataset):
     @staticmethod
     def split_df(df:pd.DataFrame, random_state=2022) -> List[pd.DataFrame]:
 
-        assert 'label' in df.columns
+        assert 'class' in df.columns
 
-        df_train, df_valid = train_test_split(df, test_size = 0.2, stratify=df['label'], random_state=random_state)
-        df_valid, df_test = train_test_split(df_valid, test_size = 0.5, stratify=df_valid['label'], random_state=random_state)
+        df_train, df_valid = train_test_split(df, test_size = 0.2, stratify=df['class'], random_state=random_state)
+        df_valid, df_test = train_test_split(df_valid, test_size = 0.5, stratify=df_valid['class'], random_state=random_state)
 
         return df_train, df_valid, df_test
