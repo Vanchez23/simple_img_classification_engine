@@ -10,7 +10,7 @@ try:
 except:
     warnings.warn('Wandb logger isn\'t installed. To install run: pip install wandb')
 
-from trainer import Classifier
+from .trainer import Classifier
 
 class Pipeline(object):
 
