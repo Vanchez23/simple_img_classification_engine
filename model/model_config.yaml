@@ -11,7 +11,10 @@ checkpoint_cfg:
   eval_criterion: less
   save_each_epoch: null
 trainer:
+  max_epochs: 200
   deterministic: true
   gpus: 0
+  accelerator: gpu
+  auto_select_gpus: true
   wandb_logger:
     project: simple_img_classify_engine
