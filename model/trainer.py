@@ -1,11 +1,15 @@
 import torch
+from torch import nn
 from torchvision import models
 import pytorch_lightning as pl
 
 class Classifier(pl.LightningModule):
     
-    def __init__(self):
-        self.model = models.resnet50(pretrained=True)
+    def __init__(self, num_classes):
+        super().__init__()
+        self.model = models.resnet50(pretrained="imagenet")
+        in_features = self.model.fc.in_features
+        self.model.fc = nn.Linear(in_features, num_classes, bias=True)
         self.loss_func = torch.nn.CrossEntropyLoss()
         self.save_hyperparameters()
 
@@ -13,9 +17,9 @@ class Classifier(pl.LightningModule):
         accuracy = torch.sum(y == pred).item() / (len(y) * 1.0)
         return {'accuracy': accuracy}
 
-    def training_step(self, batch):
+    def training_step(self, batch, batch_idx):
         x,y = batch
-        x = x.view(x.size(0), -1)
+        # x = x.view(x.size(0), -1)
         pred = self.model(x)
         loss = self.loss_func(pred, y)
         self.log('train_batch_loss', loss)
@@ -40,9 +44,9 @@ class Classifier(pl.LightningModule):
         return means
 
 
-    def validation_step(self, batch):
+    def validation_step(self, batch, batch_idx):
         x,y = batch
-        x = x.view(x.size(0), -1)
+        # x = x.view(x.size(0), -1)
         pred = self.model(x)
         loss = self.loss_func(pred, y)
         self.log('valid_batch_loss', loss)
@@ -62,9 +66,9 @@ class Classifier(pl.LightningModule):
         return means
 
 
-    def test_step(self, batch):
+    def test_step(self, batch, batch_idx):
         x,y = batch
-        x = x.view(x.size(0), -1)
+        # x = x.view(x.size(0), -1)
         pred = self.model(x)
         loss = self.loss_func(pred, y)
 
@@ -86,3 +90,8 @@ class Classifier(pl.LightningModule):
             self.log(name, value)
 
         return means
+
+    def configure_optimizers(self):
+        optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
+        lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1)
+        return [optimizer],[lr_scheduler]
