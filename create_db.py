@@ -9,15 +9,29 @@ def create_connection(db_file):
         con = sl.connect(db_file)
         print(sl.version)
         with con:
+            con.execute("""PRAGMA foreign_keys=on""")
+            con.execute("""
+                CREATE TABLE trains (
+                    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                    experiment TEXT,
+                    model_path TEXT,
+                    loss REAL,
+                    accuracy REAL,
+                    data_version TEXT,
+                    created_at TEXT
+                );
+            """)
             con.execute("""
                 CREATE TABLE predictions (
                     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
                     image_link TEXT,
                     image_label INTEGER,
                     image_class TEXT,
-                    prediction_time DATETIME,
+                    prediction_time REAL,
                     created_at DATETIME,
-                    status TEXT
+                    status TEXT,
+                    train_id INTEGER,
+                    FOREIGN KEY(train_id) REFERENCES trains(id)
                 );
             """)
     except Error as e:

@@ -1,17 +1,19 @@
-annotation_file: 
-batch_size: 8
-img_dir: 
-num_classes: 5
-random_state: 2022
-split_dataset: true
+dataloader:
+  annotation_file:
+  batch_size: 8
+  img_dir: 
+  num_classes: 5
+  random_state: 2022
+  split_dataset: true
 checkpoint_cfg:
   load_path:
-  save_path:
+  experiment_path: 
+  experiment_name: ""
   eval_metric: loss
   eval_criterion: less
   save_each_epoch: null
 trainer:
-  max_epochs: 200
+  max_epochs: 3
   deterministic: true
   gpus: 0
   accelerator: gpu

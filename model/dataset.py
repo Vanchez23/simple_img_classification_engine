@@ -1,9 +1,10 @@
 import os.path as osp
 from typing import Union, List, Tuple
+
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import cv2
-
 import torch
 from torch.utils.data import Dataset
 import albumentations as A
@@ -28,11 +29,21 @@ class CustomDataset(Dataset):
 
     def __getitem__(self, idx:int) -> Tuple[torch.Tensor, int]:
         sample = self.img_labels.iloc[idx]
-        img = cv2.imread(osp.join(self.img_dir, sample["name"]))
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        img = self.transform(image=img)['image']
+        img = CustomDataset.prepare_img(osp.join(self.img_dir, sample["name"]),
+                                        self.transform)
 
         return img, sample["class"]
+
+    @staticmethod
+    def prepare_img(img:Union[str,np.ndarray], 
+                    transform:List[Union[A.BasicTransform,A.BaseCompose]]) -> torch.Tensor:
+
+        img = cv2.imread(img) if isinstance(img, str) else img
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = transform(image=img)['image']
+
+        return img
+
 
     @staticmethod
     def read_annotation_file(annotation_file:Union[str,pd.DataFrame]) -> pd.DataFrame:
