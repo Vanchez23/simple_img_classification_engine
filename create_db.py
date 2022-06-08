@@ -1,3 +1,4 @@
+from pathlib import Path
 import sqlite3 as sl
 from sqlite3 import Error
 
@@ -5,6 +6,8 @@ from sqlite3 import Error
 def create_connection(db_file):
     """ create a database connection to a SQLite database """
     conn = None
+    df_file = Path(db_file)
+    df_file.parent.mkdir(exist_ok=True)
     try:
         con = sl.connect(db_file)
         print(sl.version)
@@ -17,7 +20,11 @@ def create_connection(db_file):
                     model_path TEXT,
                     loss REAL,
                     accuracy REAL,
+                    f1_score REAL,
+                    precision REAL,
+                    recall REAL,
                     data_version TEXT,
+                    duration TEXT,
                     created_at TEXT
                 );
             """)
@@ -29,7 +36,6 @@ def create_connection(db_file):
                     image_class TEXT,
                     prediction_time REAL,
                     created_at DATETIME,
-                    status TEXT,
                     train_id INTEGER,
                     FOREIGN KEY(train_id) REFERENCES trains(id)
                 );

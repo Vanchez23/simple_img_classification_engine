@@ -1,0 +1,23 @@
+reinit_fit_model: true
+load_predict_model: true
+dataloader:
+  annotation_file: ./data/sample_dataset/annotation_file.csv
+  batch_size: 4
+  num_workers: 4
+  img_dir: ./data/sample_dataset/images
+  num_classes: 5
+  random_state: 2022
+  split_dataset: false
+checkpoint_cfg:
+  load_path: 
+  experiment_path: experiments
+  experiment_name: ""
+  eval_metric: f1_score
+  eval_criterion: more
+  save_each_epoch: 
+trainer:
+  max_epochs: 2
+  deterministic: true
+  gpus: 0
+  accelerator: gpu
+  auto_select_gpus: true

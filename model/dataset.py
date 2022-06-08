@@ -20,8 +20,8 @@ class CustomDataset(Dataset):
         self.transform = transform
         if self.transform is None:
             self.transform = A.Compose([
-                            A.Normalize(mean=(0.485, 0.456, 0.406), 
-                                        std=(0.229, 0.224, 0.225)),
+                            A.Normalize(mean=(0.5, 0.5, 0.5), 
+                                        std=(0.5, 0.5, 0.5)),
                             ToTensorV2()])
 
     def __len__(self) -> int:
@@ -40,7 +40,7 @@ class CustomDataset(Dataset):
 
         img = cv2.imread(img) if isinstance(img, str) else img
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        img = transform(image=img)['image']
+        img = transform(image=img)['image']/255.
 
         return img
 
@@ -61,7 +61,7 @@ class CustomDataset(Dataset):
     def split_df(df:pd.DataFrame, random_state=2022) -> List[pd.DataFrame]:
 
         assert 'class' in df.columns
-
+        df.drop_duplicates('name', inplace=True)
         df_train, df_valid = train_test_split(df, test_size = 0.2, stratify=df['class'], random_state=random_state)
         df_valid, df_test = train_test_split(df_valid, test_size = 0.5, stratify=df_valid['class'], random_state=random_state)
 
