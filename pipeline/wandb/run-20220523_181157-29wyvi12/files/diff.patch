@@ -1,0 +1,224 @@
+diff --git a/model/__pycache__/create_dataset.cpython-38.pyc b/model/__pycache__/create_dataset.cpython-38.pyc
+index d45cb60..e2fcdb3 100644
+Binary files a/model/__pycache__/create_dataset.cpython-38.pyc and b/model/__pycache__/create_dataset.cpython-38.pyc differ
+diff --git a/model/__pycache__/pipeline.cpython-38.pyc b/model/__pycache__/pipeline.cpython-38.pyc
+index f58cb90..54394cd 100644
+Binary files a/model/__pycache__/pipeline.cpython-38.pyc and b/model/__pycache__/pipeline.cpython-38.pyc differ
+diff --git a/model/__pycache__/trainer.cpython-38.pyc b/model/__pycache__/trainer.cpython-38.pyc
+index 440f2bb..f240b45 100644
+Binary files a/model/__pycache__/trainer.cpython-38.pyc and b/model/__pycache__/trainer.cpython-38.pyc differ
+diff --git a/model/create_dataset.py b/model/create_dataset.py
+index 4ac9817..a18bf9a 100644
+--- a/model/create_dataset.py
++++ b/model/create_dataset.py
+@@ -2,33 +2,31 @@ import os.path as osp
+ from typing import Union, List, Tuple
+ import pandas as pd
+ from sklearn.model_selection import train_test_split
++import cv2
+ 
+ import torch
+ from torch.utils.data import Dataset
+-from torchvision.transforms import ToTensor
+-from torchvision.io import read_image
++from albumentations.pytorch import ToTensorV2
++
+ 
+ class CustomDataset(Dataset):
+ 
+     def __init__(self, img_labels:pd.DataFrame, img_dir:str, 
+-                transform:List=None, target_transform:List=None) -> None:
++                transform:List=None) -> None:
+         self.img_labels = img_labels
+         self.img_dir = img_dir
+-        self.transform = transform
+-        self.target_transform = target_transform
++        self.transform = ToTensorV2() if transform is None else transform
+ 
+     def __len__(self) -> int:
+         return len(self.img_labels)
+ 
+-    def __getitem__(self, idx:int) -> Tuple[torch.Tensor, str]:
+-        img_path = osp.join(self.img_dir, self.img_labels.iloc[idx,"name"])
+-        img = read_image(img_path)
+-        label = self.img_labels.iloc[idx, "label"]
+-        if self.transform:
+-            img = self.transform(img)
+-        if self.target_transform:
+-            label = self.target_transform(label)
+-        return img, label
++    def __getitem__(self, idx:int) -> Tuple[torch.Tensor, int]:
++        sample = self.img_labels.iloc[idx]
++        img = cv2.imread(osp.join(self.img_dir, sample["name"]))
++        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
++        img = self.transform(image=img)['image']
++
++        return img, sample["class"]
+ 
+     @staticmethod
+     def read_annotation_file(annotation_file:Union[str,pd.DataFrame]) -> pd.DataFrame:
+@@ -48,6 +46,6 @@ class CustomDataset(Dataset):
+         assert 'label' in df.columns
+ 
+         df_train, df_valid = train_test_split(df, test_size = 0.2, stratify=df['label'], random_state=random_state)
+-        df_valid, df_test = train_test_split(df, test_size = 0.5, stratify=df_valid['label'], random_sate=random_state)
++        df_valid, df_test = train_test_split(df_valid, test_size = 0.5, stratify=df_valid['label'], random_state=random_state)
+ 
+         return df_train, df_valid, df_test
+diff --git a/model/pipeline.py b/model/pipeline.py
+index 10aff56..50b7f80 100644
+--- a/model/pipeline.py
++++ b/model/pipeline.py
+@@ -1,14 +1,17 @@
+ from logging import warning
+ from typing import Dict, Tuple
++
++
+ from torch.utils.data import DataLoader
+ from pytorch_lightning import Trainer
+-
+-from trainer import Classifier
+ try:
+     from pytorch_lightning.loggers import WandbLogger
+ except:
+     print('Wandb logger isn\'t installed. To install run: pip install wandb')
++import albumentations as A
++from albumentations.pytorch import ToTensorV2
+ 
++from trainer import Classifier
+ from create_dataset import CustomDataset
+ 
+ class Pipeline:
+@@ -20,9 +23,8 @@ class Pipeline:
+         logger = WandbLogger(**trainer_cfg['wandb_logger'])
+         self.trainer = Trainer(gpus = trainer_cfg['gpus'], 
+                         deterministic= trainer_cfg['deterministic'],
+-                        logger=logger,
+-                        log_gpu_memory=trainer_cfg['log_gpu_memory'])
+-        self.classifier = Classifier()
++                        logger=logger)
++        self.classifier = Classifier(self._cfg['num_classes'])
+ 
+ 
+     def _set_dataloaders(self) -> Tuple[DataLoader,DataLoader, DataLoader]:
+@@ -32,7 +34,9 @@ class Pipeline:
+ 
+         df = CustomDataset.read_annotation_file(annotation_file)
+ 
+-        assert ['name','label'] in df.columns
++        necessary_columns = ('name','label')
++        for column_name in necessary_columns:
++            assert column_name in df.columns, f"Columns: {necessary_columns} should be in the dataframe"
+ 
+         if self._cfg['split_dataset']:
+             df_train, df_valid, df_test = CustomDataset.split_df(df, self._cfg['random_state'])
+@@ -42,12 +46,22 @@ class Pipeline:
+             df_valid = df[df['split'] == 'valid']
+             df_test = df[df['split'] == 'test']
+ 
+-        train_dataset = CustomDataset(df_train, img_dir)
+-        valid_dataset = CustomDataset(df_valid, img_dir)
+-        test_dataset = CustomDataset(df_test, img_dir)
++        train_transform = A.Compose([
++            A.HorizontalFlip(p=0.5),
++            A.RandomBrightnessContrast(p=0.2),
++            A.Resize(224,224),
++            ToTensorV2()
++        ])
++        valid_transform = A.Compose([
++            A.Resize(224,224),
++            ToTensorV2()
++        ])
++        train_dataset = CustomDataset(df_train, img_dir, train_transform)
++        valid_dataset = CustomDataset(df_valid, img_dir, valid_transform)
++        test_dataset = CustomDataset(df_test, img_dir, valid_transform)
+ 
+         train_loader = DataLoader(train_dataset, batch_size = 64, shuffle=True)
+-        valid_loader = DataLoader(valid_dataset, batch_size = 64, shuffle=True)
++        valid_loader = DataLoader(valid_dataset, batch_size = 64, shuffle=False)
+         test_loader = DataLoader(test_dataset, batch_size = 64, shuffle = False)
+ 
+         return train_loader, valid_loader, test_loader
+diff --git a/model/trainer.py b/model/trainer.py
+index 68285b3..bbd9293 100644
+--- a/model/trainer.py
++++ b/model/trainer.py
+@@ -1,11 +1,15 @@
+ import torch
++from torch import nn
+ from torchvision import models
+ import pytorch_lightning as pl
+ 
+ class Classifier(pl.LightningModule):
+     
+-    def __init__(self):
+-        self.model = models.resnet50(pretrained=True)
++    def __init__(self, num_classes):
++        super().__init__()
++        self.model = models.resnet50(pretrained="imagenet")
++        in_features = self.model.fc.in_features
++        self.model.fc = nn.Linear(in_features, num_classes, bias=True)
+         self.loss_func = torch.nn.CrossEntropyLoss()
+         self.save_hyperparameters()
+ 
+@@ -86,3 +90,8 @@ class Classifier(pl.LightningModule):
+             self.log(name, value)
+ 
+         return means
++
++    def configure_optimizers(self):
++        optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
++        lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1)
++        return [optimizer],[lr_scheduler]
+diff --git a/model/wandb/debug-internal.log b/model/wandb/debug-internal.log
+index 336d471..6d25cf9 120000
+--- a/model/wandb/debug-internal.log
++++ b/model/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20220523_005215-2f20jaiw/logs/debug-internal.log
+\ No newline at end of file
++run-20220523_181157-29wyvi12/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/model/wandb/debug.log b/model/wandb/debug.log
+index 5b3df1f..6a34814 120000
+--- a/model/wandb/debug.log
++++ b/model/wandb/debug.log
+@@ -1 +1 @@
+-run-20220523_005215-2f20jaiw/logs/debug.log
+\ No newline at end of file
++run-20220523_181157-29wyvi12/logs/debug.log
+\ No newline at end of file
+diff --git a/model/wandb/latest-run b/model/wandb/latest-run
+index 0f3c85c..2c52a09 120000
+--- a/model/wandb/latest-run
++++ b/model/wandb/latest-run
+@@ -1 +1 @@
+-run-20220523_005215-2f20jaiw
+\ No newline at end of file
++run-20220523_181157-29wyvi12
+\ No newline at end of file
+diff --git a/requirements.txt b/requirements.txt
+index de1ddae..b425b41 100755
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,6 +1,15 @@
++aiosqlite==0.17.0
++albumentations==1.1.0
++databases==0.5.5
+ fastapi-socketio==0.0.9
+-uvicorn==0.17.6
++opencv-python==4.5.5.64
++pandas==1.4.2
++pydantic==1.9.1
+ pysqlite3==0.4.7
+-databases==0.5.5
+-aiosqlite==0.17.0
+-pydantic==1.9.1
+\ No newline at end of file
++pytorch_lightning==1.6.3
++scikit-learn==1.1.1
++seaborn==0.11.2
++torch==1.11.0
++torchvision==0.12.0
++uvicorn==0.17.6
++wandb==0.12.16

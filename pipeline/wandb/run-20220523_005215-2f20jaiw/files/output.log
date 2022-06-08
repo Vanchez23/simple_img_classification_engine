@@ -1,0 +1,23 @@
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:35: LightningDeprecationWarning: Setting `log_gpu_memory` with the trainer flag is deprecated in v1.5 and will be removed in v1.7. Please monitor GPU stats with the `DeviceStatsMonitor` callback directly instead.
+  rank_zero_deprecation(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+wandb: ERROR Internal wandb error: file data was not synced
+Downloading: "https://download.pytorch.org/models/resnet50-0676ba61.pth" to /home/vanchez/.cache/torch/hub/checkpoints/resnet50-0676ba61.pth
+
+
+
+
+100%|██████████| 97.8M/97.8M [00:08<00:00, 11.8MB/s]
+Error in callback <function _WandbInit._pause_backend at 0x7fb38758b040> (for post_run_cell):
+Error in callback <function _WandbInit._resume_backend at 0x7fb3875ea670> (for pre_run_cell):
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs

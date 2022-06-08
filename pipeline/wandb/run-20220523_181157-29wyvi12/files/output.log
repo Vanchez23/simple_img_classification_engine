@@ -1,0 +1,37 @@
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+

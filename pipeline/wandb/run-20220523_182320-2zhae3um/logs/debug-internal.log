@@ -1,0 +1,270 @@
+2022-05-23 18:23:20,262 INFO    StreamThr :15332 [internal.py:wandb_internal():90] W&B internal server running at pid: 15332, started at: 2022-05-23 18:23:20.261196
+2022-05-23 18:23:20,269 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: status
+2022-05-23 18:23:20,272 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: status
+2022-05-23 18:23:20,276 INFO    WriterThread:15332 [datastore.py:open_for_write():75] open: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/run-2zhae3um.wandb
+2022-05-23 18:23:20,276 DEBUG   SenderThread:15332 [sender.py:send():232] send: header
+2022-05-23 18:23:20,300 DEBUG   SenderThread:15332 [sender.py:send():232] send: run
+2022-05-23 18:23:20,306 INFO    SenderThread:15332 [sender.py:_maybe_setup_resume():489] checking resume status for None/simple_img_classify_engine/2zhae3um
+2022-05-23 18:23:20,972 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: check_version
+2022-05-23 18:23:20,980 INFO    SenderThread:15332 [dir_watcher.py:__init__():197] watching files in: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files
+2022-05-23 18:23:20,981 INFO    SenderThread:15332 [sender.py:_start_run_threads():811] run started: 2zhae3um with start time 1653315800
+2022-05-23 18:23:20,981 DEBUG   SenderThread:15332 [sender.py:send():232] send: summary
+2022-05-23 18:23:20,982 INFO    SenderThread:15332 [sender.py:_save_file():948] saving file wandb-summary.json with policy end
+2022-05-23 18:23:20,982 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: check_version
+2022-05-23 18:23:21,327 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: run_start
+2022-05-23 18:23:21,330 DEBUG   HandlerThread:15332 [meta.py:__init__():35] meta init
+2022-05-23 18:23:21,330 DEBUG   HandlerThread:15332 [meta.py:__init__():49] meta init done
+2022-05-23 18:23:21,330 DEBUG   HandlerThread:15332 [meta.py:probe():209] probe
+2022-05-23 18:23:21,332 DEBUG   HandlerThread:15332 [meta.py:_setup_git():199] setup git
+2022-05-23 18:23:21,369 DEBUG   HandlerThread:15332 [meta.py:_setup_git():206] setup git done
+2022-05-23 18:23:21,370 DEBUG   HandlerThread:15332 [meta.py:_save_code():87] save code
+2022-05-23 18:23:21,370 WARNING HandlerThread:15332 [meta.py:_save_code():89] unable to save code -- program entry not found
+2022-05-23 18:23:21,370 DEBUG   HandlerThread:15332 [meta.py:_save_patches():125] save patches
+2022-05-23 18:23:21,475 DEBUG   HandlerThread:15332 [meta.py:_save_patches():167] save patches done
+2022-05-23 18:23:21,476 DEBUG   HandlerThread:15332 [meta.py:_save_pip():53] save pip
+2022-05-23 18:23:21,477 DEBUG   HandlerThread:15332 [meta.py:_save_pip():67] save pip done
+2022-05-23 18:23:21,477 DEBUG   HandlerThread:15332 [meta.py:probe():247] probe done
+2022-05-23 18:23:21,630 DEBUG   SenderThread:15332 [sender.py:send():232] send: files
+2022-05-23 18:23:21,631 INFO    SenderThread:15332 [sender.py:_save_file():948] saving file wandb-metadata.json with policy now
+2022-05-23 18:23:21,632 INFO    SenderThread:15332 [sender.py:_save_file():948] saving file diff.patch with policy now
+2022-05-23 18:23:21,670 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:23:21,672 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:23:21,973 DEBUG   SenderThread:15332 [sender.py:send():232] send: telemetry
+2022-05-23 18:23:21,974 DEBUG   SenderThread:15332 [sender.py:send():232] send: metric
+2022-05-23 18:23:21,974 DEBUG   SenderThread:15332 [sender.py:send():232] send: telemetry
+2022-05-23 18:23:21,976 DEBUG   SenderThread:15332 [sender.py:send():232] send: metric
+2022-05-23 18:23:21,981 WARNING SenderThread:15332 [sender.py:send_metric():904] Seen metric with glob (shouldn't happen)
+2022-05-23 18:23:22,011 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_created():244] file/dir created: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/wandb-summary.json
+2022-05-23 18:23:22,011 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_created():244] file/dir created: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/diff.patch
+2022-05-23 18:23:22,012 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_created():244] file/dir created: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:23:22,012 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_created():244] file/dir created: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/wandb-metadata.json
+2022-05-23 18:23:22,013 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_created():244] file/dir created: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/requirements.txt
+2022-05-23 18:23:22,615 INFO    Thread-16 :15332 [upload_job.py:push():132] Uploaded file /tmp/tmpgsfr0_tywandb/3n9throp-wandb-metadata.json
+2022-05-23 18:23:22,628 INFO    Thread-17 :15332 [upload_job.py:push():132] Uploaded file /tmp/tmpgsfr0_tywandb/3qg1slgv-diff.patch
+2022-05-23 18:23:23,124 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:23:23,124 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:23:23,154 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:23:23,296 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:23:23,296 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:23:23,366 DEBUG   SenderThread:15332 [sender.py:send():232] send: config
+2022-05-23 18:23:24,009 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:23:26,011 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:23:29,752 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:23:29,752 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:23:29,824 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:23:36,992 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:23:36,993 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:23:52,331 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:23:53,363 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:23:54,033 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/config.yaml
+2022-05-23 18:24:09,024 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:24:09,025 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:24:24,383 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:24:24,384 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:24:39,744 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:24:39,744 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:24:53,398 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:24:53,398 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:24:54,079 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:24:54,698 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:24:54,699 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:24:54,707 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:24:55,104 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:24:55,104 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:24:57,732 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:24:57,732 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:24:57,802 DEBUG   SenderThread:15332 [sender.py:send():232] send: config
+2022-05-23 18:24:59,190 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:24:59,190 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:24:59,242 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:25:00,083 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:25:10,465 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:25:10,466 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:25:24,102 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/config.yaml
+2022-05-23 18:25:25,757 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:25:25,758 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:25:41,082 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:25:41,083 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:25:54,612 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:25:54,612 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:25:54,655 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:25:54,655 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:25:54,719 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:25:54,938 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:25:54,938 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:25:55,380 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:25:55,380 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:25:55,447 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:25:55,876 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:25:55,876 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:25:55,887 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:25:55,887 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:25:55,984 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:25:56,546 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:25:56,546 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:26:11,905 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:26:11,906 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:26:22,670 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:26:22,671 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:26:22,674 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:26:22,674 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:26:22,679 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:26:27,368 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:26:27,368 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:26:35,250 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:26:35,250 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:26:35,749 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:26:35,750 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:26:35,759 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:26:42,732 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:26:42,733 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:26:58,089 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:26:58,089 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:27:13,450 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:27:13,451 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:27:28,757 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:27:28,758 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:27:44,067 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:27:44,068 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:27:45,688 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:27:45,688 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:27:45,700 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:27:45,700 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:27:45,795 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:27:59,428 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:27:59,429 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:28:14,718 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:28:14,719 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:28:30,045 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:28:30,046 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:28:45,508 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:28:45,509 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:29:00,868 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:29:00,869 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:29:16,333 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:29:16,333 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:29:31,617 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:29:31,618 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:29:46,902 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:29:46,903 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:30:02,207 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:30:02,208 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:30:17,561 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:30:17,562 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:30:32,927 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:30:32,928 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:30:48,288 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:30:48,289 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:30:53,617 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:30:53,617 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:30:53,620 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:30:53,620 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:30:53,624 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:30:59,174 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:30:59,174 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:00,359 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:31:00,397 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:00,397 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:00,485 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:01,424 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:01,425 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:01,459 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:01,459 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:01,532 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:02,296 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:02,297 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:02,996 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:02,996 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:03,004 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:03,751 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:31:03,752 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:31:04,508 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:04,509 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:04,517 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:04,518 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:04,616 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:06,155 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:06,156 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:06,170 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:06,170 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:06,263 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:14,769 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:14,770 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:14,810 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:14,811 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:14,877 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:18,330 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:18,330 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:18,342 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:18,342 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:18,438 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:19,142 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:31:19,143 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:31:34,472 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:31:34,473 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:31:43,110 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:43,111 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:43,151 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:43,151 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:43,218 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:31:43,901 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:31:43,901 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:31:49,831 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:31:49,832 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:31:56,297 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:31:56,297 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:31:56,347 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:32:00,337 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:32:00,337 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:32:00,379 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:32:00,379 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:32:00,444 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:32:03,929 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:32:03,929 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:32:03,938 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:32:03,939 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:32:04,036 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:32:05,194 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:32:05,195 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:32:08,409 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:32:08,409 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:32:08,417 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:32:08,417 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:32:08,517 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:32:14,026 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:32:14,026 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:32:14,034 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: pause
+2022-05-23 18:32:14,034 INFO    HandlerThread:15332 [handler.py:handle_request_pause():695] stopping system metrics thread
+2022-05-23 18:32:14,133 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:32:21,883 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:32:21,884 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:32:29,103 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: resume
+2022-05-23 18:32:29,103 INFO    HandlerThread:15332 [handler.py:handle_request_resume():686] starting system metrics thread
+2022-05-23 18:32:29,166 DEBUG   SenderThread:15332 [sender.py:send():232] send: config
+2022-05-23 18:32:30,429 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:32:31,429 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/config.yaml
+2022-05-23 18:32:37,244 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:32:37,246 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:32:42,438 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:32:52,611 DEBUG   HandlerThread:15332 [handler.py:handle_request():141] handle_request: stop_status
+2022-05-23 18:32:52,611 DEBUG   SenderThread:15332 [sender.py:send_request():246] send_request: stop_status
+2022-05-23 18:32:54,448 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:32:55,450 INFO    Thread-12 :15332 [dir_watcher.py:_on_file_modified():257] file/dir modified: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log
+2022-05-23 18:32:57,203 DEBUG   SenderThread:15332 [sender.py:send():232] send: stats
+2022-05-23 18:33:06,863 WARNING StreamThr :15332 [internal.py:is_dead():387] Internal process exiting, parent pid 15275 disappeared
+2022-05-23 18:33:06,865 ERROR   StreamThr :15332 [internal.py:wandb_internal():149] Internal process shutdown.
+2022-05-23 18:33:06,873 INFO    WriterThread:15332 [datastore.py:close():279] close: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/run-2zhae3um.wandb
+2022-05-23 18:33:06,874 INFO    SenderThread:15332 [sender.py:finish():1110] shutting down sender
+2022-05-23 18:33:06,876 INFO    SenderThread:15332 [dir_watcher.py:finish():312] shutting down directory watcher
+2022-05-23 18:33:06,885 INFO    HandlerThread:15332 [handler.py:finish():806] shutting down handler
+2022-05-23 18:33:07,877 INFO    SenderThread:15332 [dir_watcher.py:finish():342] scan: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files
+2022-05-23 18:33:07,877 INFO    SenderThread:15332 [dir_watcher.py:finish():356] scan save: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/wandb-summary.json wandb-summary.json
+2022-05-23 18:33:07,878 INFO    SenderThread:15332 [dir_watcher.py:finish():356] scan save: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/output.log output.log
+2022-05-23 18:33:07,878 INFO    SenderThread:15332 [dir_watcher.py:finish():356] scan save: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/diff.patch diff.patch
+2022-05-23 18:33:07,878 INFO    SenderThread:15332 [dir_watcher.py:finish():356] scan save: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/wandb-metadata.json wandb-metadata.json
+2022-05-23 18:33:07,878 INFO    SenderThread:15332 [dir_watcher.py:finish():356] scan save: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/config.yaml config.yaml
+2022-05-23 18:33:07,878 INFO    SenderThread:15332 [dir_watcher.py:finish():356] scan save: /home/vanchez/Projects/ArtLabs/model/wandb/run-20220523_182320-2zhae3um/files/requirements.txt requirements.txt
+2022-05-23 18:33:07,879 INFO    SenderThread:15332 [file_pusher.py:finish():145] shutting down file pusher
+2022-05-23 18:33:07,879 INFO    SenderThread:15332 [file_pusher.py:join():150] waiting for file pusher
+2022-05-23 18:33:08,904 INFO    MainThread:15332 [internal.py:handle_exit():80] Internal process exited
+2022-05-23 18:33:08,905 WARNING MsgRouterThr:15332 [router.py:message_loop():73] EOFError seen in message_loop

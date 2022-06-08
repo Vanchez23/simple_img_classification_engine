@@ -1,0 +1,262 @@
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/logger_connector/logger_connector.py:35: LightningDeprecationWarning: Setting `log_gpu_memory` with the trainer flag is deprecated in v1.5 and will be removed in v1.7. Please monitor GPU stats with the `DeviceStatsMonitor` callback directly instead.
+  rank_zero_deprecation(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Sanity Checking: 0it [00:00, ?it/s]
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:487: PossibleUserWarning: Your `val_dataloader`'s sampler has shuffling enabled, it is strongly recommended that you turn shuffling off for val/test/predict dataloaders.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]Unexpected exception formatting exception. Falling back to standard exception
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Traceback (most recent call last):
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/interactiveshell.py", line 3397, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "/tmp/ipykernel_6582/3415392493.py", line 1, in <cell line: 1>
+    pipeline.run()
+  File "/home/vanchez/Projects/ArtLabs/model/pipeline.py", line 74, in run
+    self.trainer.fit(self.classifier, train_dataloaders=train_loader,
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 768, in fit
+    self._call_and_handle_interrupt(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 721, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 809, in _fit_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1234, in _run
+    results = self._run_stage()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1321, in _run_stage
+    return self._run_train()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1343, in _run_train
+    self._run_sanity_check()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1411, in _run_sanity_check
+    val_loop.run()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 204, in run
+    self.advance(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 154, in advance
+    dl_outputs = self.epoch_loop.run(self._data_fetcher, dl_max_batches, kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 204, in run
+    self.advance(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 127, in advance
+    output = self._evaluation_step(**kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 222, in _evaluation_step
+    output = self.trainer._call_strategy_hook("validation_step", *kwargs.values())
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1763, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/strategies/strategy.py", line 344, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+TypeError: validation_step() takes 2 positional arguments but 3 were given
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/interactiveshell.py", line 1992, in showtraceback
+    stb = self.InteractiveTB.structured_traceback(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 1118, in structured_traceback
+    return FormattedTB.structured_traceback(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 1012, in structured_traceback
+    return VerboseTB.structured_traceback(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 865, in structured_traceback
+    formatted_exception = self.format_exception_as_a_whole(etype, evalue, etb, number_of_lines_of_context,
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 818, in format_exception_as_a_whole
+    frames.append(self.format_record(r))
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 736, in format_record
+    result += ''.join(_format_traceback_lines(frame_info.lines, Colors, self.has_colors, lvals))
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/core.py", line 698, in lines
+    pieces = self.included_pieces
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/core.py", line 649, in included_pieces
+    pos = scope_pieces.index(self.executing_piece)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/core.py", line 628, in executing_piece
+    return only(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/executing/executing.py", line 164, in only
+    raise NotOneValueFound('Expected one value, found 0')
+executing.executing.NotOneValueFound: Expected one value, found 0
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loggers/wandb.py:347: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  rank_zero_warn(
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/utilities.py:91: PossibleUserWarning: `max_epochs` was not set. Setting it to 1000 epochs. To train without an epoch limit, set `max_epochs=-1`.
+  rank_zero_warn(
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+  | Name      | Type             | Params
+-----------------------------------------------
+0 | model     | ResNet           | 23.5 M
+1 | loss_func | CrossEntropyLoss | 0
+-----------------------------------------------
+23.5 M    Trainable params
+0         Non-trainable params
+23.5 M    Total params
+94.073    Total estimated model params size (MB)
+/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:240: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 16 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]Unexpected exception formatting exception. Falling back to standard exception
+Traceback (most recent call last):
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/interactiveshell.py", line 3397, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "/tmp/ipykernel_6582/3415392493.py", line 1, in <cell line: 1>
+    pipeline.run()
+  File "/home/vanchez/Projects/ArtLabs/model/pipeline.py", line 74, in run
+    self.trainer.fit(self.classifier, train_dataloaders=train_loader,
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 768, in fit
+    self._call_and_handle_interrupt(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 721, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 809, in _fit_impl
+    results = self._run(model, ckpt_path=self.ckpt_path)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1234, in _run
+    results = self._run_stage()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1321, in _run_stage
+    return self._run_train()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1343, in _run_train
+    self._run_sanity_check()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1411, in _run_sanity_check
+    val_loop.run()
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 204, in run
+    self.advance(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/dataloader/evaluation_loop.py", line 154, in advance
+    dl_outputs = self.epoch_loop.run(self._data_fetcher, dl_max_batches, kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/base.py", line 204, in run
+    self.advance(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 127, in advance
+    output = self._evaluation_step(**kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/loops/epoch/evaluation_epoch_loop.py", line 222, in _evaluation_step
+    output = self.trainer._call_strategy_hook("validation_step", *kwargs.values())
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/trainer/trainer.py", line 1763, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/pytorch_lightning/strategies/strategy.py", line 344, in validation_step
+    return self.model.validation_step(*args, **kwargs)
+TypeError: validation_step() takes 2 positional arguments but 3 were given
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/interactiveshell.py", line 1992, in showtraceback
+    stb = self.InteractiveTB.structured_traceback(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 1118, in structured_traceback
+    return FormattedTB.structured_traceback(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 1012, in structured_traceback
+    return VerboseTB.structured_traceback(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 865, in structured_traceback
+    formatted_exception = self.format_exception_as_a_whole(etype, evalue, etb, number_of_lines_of_context,
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 818, in format_exception_as_a_whole
+    frames.append(self.format_record(r))
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/IPython/core/ultratb.py", line 736, in format_record
+    result += ''.join(_format_traceback_lines(frame_info.lines, Colors, self.has_colors, lvals))
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/core.py", line 698, in lines
+    pieces = self.included_pieces
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/core.py", line 649, in included_pieces
+    pos = scope_pieces.index(self.executing_piece)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/stack_data/core.py", line 628, in executing_piece
+    return only(
+  File "/home/vanchez/Projects/ArtLabs/venv2/lib/python3.8/site-packages/executing/executing.py", line 164, in only
+    raise NotOneValueFound('Expected one value, found 0')

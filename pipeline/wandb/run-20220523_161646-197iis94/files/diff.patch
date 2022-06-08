@@ -1,0 +1,98 @@
+diff --git a/model/__pycache__/create_dataset.cpython-38.pyc b/model/__pycache__/create_dataset.cpython-38.pyc
+index d45cb60..66befdb 100644
+Binary files a/model/__pycache__/create_dataset.cpython-38.pyc and b/model/__pycache__/create_dataset.cpython-38.pyc differ
+diff --git a/model/__pycache__/pipeline.cpython-38.pyc b/model/__pycache__/pipeline.cpython-38.pyc
+index f58cb90..7b180f2 100644
+Binary files a/model/__pycache__/pipeline.cpython-38.pyc and b/model/__pycache__/pipeline.cpython-38.pyc differ
+diff --git a/model/__pycache__/trainer.cpython-38.pyc b/model/__pycache__/trainer.cpython-38.pyc
+index 440f2bb..aaf0535 100644
+Binary files a/model/__pycache__/trainer.cpython-38.pyc and b/model/__pycache__/trainer.cpython-38.pyc differ
+diff --git a/model/create_dataset.py b/model/create_dataset.py
+index 4ac9817..9b281e2 100644
+--- a/model/create_dataset.py
++++ b/model/create_dataset.py
+@@ -48,6 +48,6 @@ class CustomDataset(Dataset):
+         assert 'label' in df.columns
+ 
+         df_train, df_valid = train_test_split(df, test_size = 0.2, stratify=df['label'], random_state=random_state)
+-        df_valid, df_test = train_test_split(df, test_size = 0.5, stratify=df_valid['label'], random_sate=random_state)
++        df_valid, df_test = train_test_split(df_valid, test_size = 0.5, stratify=df_valid['label'], random_state=random_state)
+ 
+         return df_train, df_valid, df_test
+diff --git a/model/pipeline.py b/model/pipeline.py
+index 10aff56..b48921c 100644
+--- a/model/pipeline.py
++++ b/model/pipeline.py
+@@ -32,7 +32,9 @@ class Pipeline:
+ 
+         df = CustomDataset.read_annotation_file(annotation_file)
+ 
+-        assert ['name','label'] in df.columns
++        necessary_columns = ('name','label')
++        for column_name in necessary_columns:
++            assert column_name in df.columns, f"Columns: {necessary_columns} should be in the dataframe"
+ 
+         if self._cfg['split_dataset']:
+             df_train, df_valid, df_test = CustomDataset.split_df(df, self._cfg['random_state'])
+diff --git a/model/trainer.py b/model/trainer.py
+index 68285b3..bf920b3 100644
+--- a/model/trainer.py
++++ b/model/trainer.py
+@@ -5,6 +5,7 @@ import pytorch_lightning as pl
+ class Classifier(pl.LightningModule):
+     
+     def __init__(self):
++        super().__init__()
+         self.model = models.resnet50(pretrained=True)
+         self.loss_func = torch.nn.CrossEntropyLoss()
+         self.save_hyperparameters()
+diff --git a/model/wandb/debug-internal.log b/model/wandb/debug-internal.log
+index 336d471..4e0f83b 120000
+--- a/model/wandb/debug-internal.log
++++ b/model/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20220523_005215-2f20jaiw/logs/debug-internal.log
+\ No newline at end of file
++run-20220523_161646-197iis94/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/model/wandb/debug.log b/model/wandb/debug.log
+index 5b3df1f..277694f 120000
+--- a/model/wandb/debug.log
++++ b/model/wandb/debug.log
+@@ -1 +1 @@
+-run-20220523_005215-2f20jaiw/logs/debug.log
+\ No newline at end of file
++run-20220523_161646-197iis94/logs/debug.log
+\ No newline at end of file
+diff --git a/model/wandb/latest-run b/model/wandb/latest-run
+index 0f3c85c..8a271db 120000
+--- a/model/wandb/latest-run
++++ b/model/wandb/latest-run
+@@ -1 +1 @@
+-run-20220523_005215-2f20jaiw
+\ No newline at end of file
++run-20220523_161646-197iis94
+\ No newline at end of file
+diff --git a/requirements.txt b/requirements.txt
+index de1ddae..14d5b84 100755
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,6 +1,13 @@
++aiosqlite==0.17.0
++databases==0.5.5
+ fastapi-socketio==0.0.9
+-uvicorn==0.17.6
++pandas==1.4.2
++pydantic==1.9.1
+ pysqlite3==0.4.7
+-databases==0.5.5
+-aiosqlite==0.17.0
+-pydantic==1.9.1
+\ No newline at end of file
++pytorch_lightning==1.6.3
++scikit-learn==1.1.1
++seaborn==0.11.2
++torch==1.11.0
++torchvision==0.12.0
++uvicorn==0.17.6
++wandb==0.12.16
