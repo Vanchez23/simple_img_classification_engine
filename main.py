@@ -9,7 +9,7 @@ import databases
 import uvicorn
 from loguru import logger
 
-from model import Pipeline
+from pipeline import Pipeline
 
 database = databases.Database(r"sqlite:///db/pythonsqlite.db")
 
