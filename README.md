@@ -31,7 +31,7 @@ pip3 install -r requirements.txt
 
 # Configuration
 
-pipeline_config.yaml
+[pipeline_config.yaml](pipeline_config.yaml)
 
 > - **reinit_fit_model** - reinitialize model weights for training
 > - **load_predict_model** - load a model for prediction from database (or from checkpoint)
