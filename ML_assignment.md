@@ -1,4 +1,4 @@
-# ArtLabs ML Engineer Assignment
+# ML Engineer Assignment
 
 The goal of the task is to create a very basic image classification engine where a user sends an image and receives a response which is a prediction of the ML model.
 
